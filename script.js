@@ -1,5 +1,5 @@
 // 1. Гар утасны цэс (Лаб 5)
-const toggle = document.querySelector('.nav__toggle');
+const toggle = document.querySelector('.nav__btn--toggle');
 const menu = document.getElementById('menu');
 toggle.addEventListener('click', () => {
   const open = menu.classList.toggle('is-open');
