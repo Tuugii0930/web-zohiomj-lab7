@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="mn" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Монголын зургийн цомог – Лаб 7</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#gallery">Цомог руу шилжих</a>
+
+  <header class="header">
+    <nav class="nav" aria-label="Үндсэн цэс">
+      <a class="nav__logo" href="#top">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 18 9 6l4 7 3-4 6 9z" fill="currentColor"/></svg>
+        Монгол цомог
+      </a>
+      <button class="nav__btn nav__btn--theme" type="button" id="theme" aria-pressed="false">Өдрийн горим</button>
+      <button class="nav__btn nav__btn--toggle" type="button" aria-expanded="false" aria-controls="menu">☰ Цэс</button>
+      <ul class="nav__list" id="menu">
+        <li><a class="nav__link" href="#top">Нүүр</a></li>
+        <li><a class="nav__link" href="#tours">Аяллууд</a></li>
+        <li><a class="nav__link" href="#gallery">Цомог</a></li>
+        <li><a class="nav__link" href="#video">Видео</a></li>
+        <li><a class="nav__link" href="#wireframe">Wireframe</a></li>
+        <li><a class="nav__link" href="#contact">Холбоо барих</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="container">
+      <h1 class="hero__title">Монголын байгалийн зургийн цомог</h1>
+      <p class="hero__text">Картын дээгүүр хулганаа аваачих, эсвэл "Эргүүлэх" товчийг дарж тайлбарыг үзнэ үү.</p>
+      <a class="btn" href="#gallery">Цомог үзэх</a>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="tours">
+      <h2>Аяллууд</h2>
+      <div class="cards">
+        <article class="card"><img class="card__img" src="img/photo5.jpg" alt="Тайга ба нуур" width="900" height="675" loading="lazy"><h3 class="card__title">Тайгын алхалт</h3><p class="card__text">Хөвсгөлийн ой, нуурын эрэг дагасан хөнгөн зам.</p></article>
+        <article class="card"><img class="card__img" src="img/photo2.jpg" alt="Уулын бэлийн бэлчээр" width="548" height="364" loading="lazy"><h3 class="card__title">Морин аялал</h3><p class="card__text">Нүүдэлчдийн гэр бууд хонож, бэлчээрээр явна.</p></article>
+        <article class="card"><img class="card__img" src="img/photo3.jpg" alt="Алтайн нуруу" width="499" height="374" loading="lazy"><h3 class="card__title">Алтайн нуруу</h3><p class="card__text">Цастай оройн бэлд хийх 3 өдрийн алхалт.</p></article>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Цомог</h2>
+      <div class="gallery">
+        <article class="flip" style="--i:0">
+          <div class="flip__inner">
+            <div class="flip__face flip__face--front">
+              <img src="img/photo1.jpg" alt="Говийн уул, үүлэн тэнгэр" width="900" height="600" loading="lazy">
+              <h3 class="flip__caption">Говийн уул, үүлэн тэнгэр</h3>
+            </div>
+            <div class="flip__face flip__face--back"><p>Үүлэн сүүдэр хөвөх уудам хээр, говийн уулс.</p></div>
+          </div>
+          <button class="flip__btn" type="button" aria-pressed="false">Эргүүлэх</button>
+        </article>
+        <article class="flip" style="--i:1">
+          <div class="flip__inner">
+            <div class="flip__face flip__face--front">
+              <img src="img/photo2.jpg" alt="Мөрөн гол" width="548" height="364" loading="lazy">
+              <h3 class="flip__caption">Мөрөн гол</h3>
+            </div>
+            <div class="flip__face flip__face--back"><p>Нугалж урсах гол, ногоон тал дахь хонин сүрэг.</p></div>
+          </div>
+          <button class="flip__btn" type="button" aria-pressed="false">Эргүүлэх</button>
+        </article>
+        <article class="flip" style="--i:2">
+          <div class="flip__inner">
+            <div class="flip__face flip__face--front">
+              <img src="img/photo3.jpg" alt="Алтайн нуруу" width="499" height="374" loading="lazy">
+              <h3 class="flip__caption">Алтайн нуруу</h3>
+            </div>
+            <div class="flip__face flip__face--back"><p>Цастай оройтой нуруу, чулуун дээрх хаг хөвд.</p></div>
+          </div>
+          <button class="flip__btn" type="button" aria-pressed="false">Эргүүлэх</button>
+        </article>
+        <article class="flip" style="--i:3">
+          <div class="flip__inner">
+            <div class="flip__face flip__face--front">
+              <img src="img/photo4.jpg" alt="Уулын бэлийн бэлчээр" width="570" height="350" loading="lazy">
+              <h3 class="flip__caption">Уулын бэлийн бэлчээр</h3>
+            </div>
+            <div class="flip__face flip__face--back"><p>Цастай уулын өвөр дээр гэр, мал сүрэг бэлчинэ.</p></div>
+          </div>
+          <button class="flip__btn" type="button" aria-pressed="false">Эргүүлэх</button>
+        </article>
+        <article class="flip" style="--i:4">
+          <div class="flip__inner">
+            <div class="flip__face flip__face--front">
+              <img src="img/photo5.jpg" alt="Тайга ба нуур" width="900" height="675" loading="lazy">
+              <h3 class="flip__caption">Тайга ба нуур</h3>
+            </div>
+            <div class="flip__face flip__face--back"><p>Хуш, шинэсэн ой дунд цастай уул, нуур.</p></div>
+          </div>
+          <button class="flip__btn" type="button" aria-pressed="false">Эргүүлэх</button>
+        </article>
+        <article class="flip" style="--i:5">
+          <div class="flip__inner">
+            <div class="flip__face flip__face--front">
+              <img src="img/photo6.jpg" alt="Сарлагийн бэлчээр" width="900" height="675" loading="lazy">
+              <h3 class="flip__caption">Сарлагийн бэлчээр</h3>
+            </div>
+            <div class="flip__face flip__face--back"><p>Горхины хөвөөнд бэлчиж буй сарлагууд.</p></div>
+          </div>
+          <button class="flip__btn" type="button" aria-pressed="false">Эргүүлэх</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="video">
+      <h2>Видео</h2>
+      <video class="media media--video" controls preload="metadata" poster="img/poster.jpg" playsinline>
+        <source src="video/clip.webm" type="video/webm">
+        <source src="video/clip.mp4" type="video/mp4">
+        <track kind="subtitles" src="video/clip.mn.vtt" srclang="mn" label="Монгол">
+        Таны хөтөч видео тоглуулахгүй байна.
+      </video>
+    </section>
+
+    <section>
+      <h2>Байршил</h2>
+      <iframe class="media media--map" title="Хөвсгөл нуурын байршил (OpenStreetMap)" loading="lazy" referrerpolicy="no-referrer"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=100.0,50.6,101.0,51.6&amp;layer=mapnik"></iframe>
+    </section>
+
+    <section id="wireframe">
+      <h2>Wireframe (эх макет)</h2>
+      <div class="wire">
+        <div class="wire__box">
+          <p>Компьютер (≥ 1024px)</p>
+          <div class="wire__item">Лого | Нүүр · Аяллууд · Цомог · Видео</div>
+          <div class="wire__item wire__item--tall">Hero: гарчиг + товч</div>
+          <div class="wire__row"><div class="wire__cell">Карт 1</div><div class="wire__cell">Карт 2</div><div class="wire__cell">Карт 3</div></div>
+          <div class="wire__row"><div class="wire__cell">Зураг</div><div class="wire__cell">Зураг</div><div class="wire__cell">Зураг</div></div>
+          <div class="wire__item">Footer</div>
+        </div>
+        <div class="wire__box">
+          <p>Гар утас (≤ 767px)</p>
+          <div class="wire__item">Лого ☰</div>
+          <div class="wire__item wire__item--tall">Hero</div>
+          <div class="wire__item">Карт</div><div class="wire__item">Зураг</div><div class="wire__item">Зураг</div>
+          <div class="wire__item">Footer</div>
+        </div>
+      </div>
+      <p class="note">Таблет (768–1023px) дээр картууд 2 баганатай, цэс дэлгэгдсэн хэвээр байна.</p>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container footer__inner">
+      <p>Утас: 9911-0000 · И-мэйл: info@example.mn</p>
+      <p>© 2026 Монгол цомог – Лаб 7</p>
+    </div>
+  </footer>
+</body>
+</html>

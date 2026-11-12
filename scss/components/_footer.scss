@@ -1,0 +1,9 @@
+@use "../abstracts" as *;
+
+.footer {
+  padding-block: rem(24); text-align: center;
+  background: var(--surface); border-top: 1px solid var(--line); color: var(--muted);
+  &__inner {
+    @include respond(md) { display: flex; justify-content: space-between; text-align: left; }
+  }
+}

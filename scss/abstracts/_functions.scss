@@ -1,0 +1,15 @@
+@use "sass:math";
+@use "sass:color";
+
+// px -> rem
+@function rem($px, $base: 16) {
+  @return math.div($px, $base) * 1rem;
+}
+
+// Дэвсгэр өнгөнд тохирох текстийн өнгө: гэрэлтэй бол харанхуй, харанхуй бол цагаан
+@function contrast($bg, $light: #fff, $dark: #0f1b1a) {
+  @if color.channel($bg, "lightness", $space: hsl) > 55% {
+    @return $dark;
+  }
+  @return $light;
+}

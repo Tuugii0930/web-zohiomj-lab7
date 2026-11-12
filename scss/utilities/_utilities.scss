@@ -1,0 +1,10 @@
+@use "../abstracts" as *;
+
+// @each-ээр utility класс үүсгэх
+@each $name, $color in $palette {
+  .bg-#{$name} { background: $color; color: contrast($color); }
+  .text-#{$name} { color: $color; }
+}
+@each $name, $r in $radii {
+  .rounded-#{$name} { border-radius: $r; }
+}

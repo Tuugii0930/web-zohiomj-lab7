@@ -1,0 +1,11 @@
+@use "../abstracts" as *;
+
+.card {
+  display: flex; flex-direction: column; gap: rem(8); padding: rem(16);
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md);
+  transition: transform .25s, border-color .25s;
+  &:hover, &:focus-within { transform: translateY(-4px); border-color: var(--accent); }
+  &__img { width: 100%; height: rem(144); object-fit: cover; border-radius: var(--radius-sm); }
+  &__title { font-size: 1.1rem; }
+  &__text { color: var(--muted); }
+}

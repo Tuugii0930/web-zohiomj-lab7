@@ -1,0 +1,34 @@
+@use "sass:map";
+@use "tokens" as t;
+@use "functions" as f;
+
+@mixin respond($bp) {
+  @media (min-width: map.get(t.$breakpoints, $bp)) {
+    @content;
+  }
+}
+
+@mixin flex-center($direction: row, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+  @if $gap != 0 {
+    gap: $gap;
+  }
+}
+
+// 1 -> 2 -> 3 баганатай responsive grid (cards, gallery)
+@mixin responsive-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: f.rem(20);
+  @include respond(md) { grid-template-columns: repeat(2, 1fr); }
+  @include respond(lg) { grid-template-columns: repeat(3, 1fr); }
+}
+
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}

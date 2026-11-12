@@ -1,0 +1,50 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+// ---- Token -> CSS custom property (@each) ----
+@each $name, $values in $themes {
+  @if $name == dark {
+    :root, [data-theme="dark"] { @each $k, $v in $values { --#{$k}: #{$v}; } }
+  } @else {
+    [data-theme="#{$name}"] { @each $k, $v in $values { --#{$k}: #{$v}; } }
+  }
+}
+:root {
+  @each $k, $v in $palette { --#{$k}: #{$v}; }
+  @each $k, $v in $radii { --radius-#{$k}: #{$v}; }
+  --speed: #{$speed};
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: $font-body;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background .3s, color .3s;
+}
+img, video, iframe { max-width: 100%; }
+iframe, video { display: block; }
+ul { list-style: none; }
+a { color: inherit; }
+h1, h2, h3 { font-family: $font-head; line-height: 1.25; }
+h2 { margin-bottom: rem(16); }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+.container { width: min(100% - 2rem, rem(1120)); margin-inline: auto; }
+.skip {
+  position: absolute; left: rem(8); top: rem(-64); z-index: 10;
+  padding: rem(8) rem(16);
+  background: var(--gold); color: contrast(map.get($palette, gold));
+  &:focus { top: rem(8); }
+}
+.note { margin-top: rem(12); color: var(--muted); }
+
+@include reduced-motion {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,11 @@
+// Design token-ууд: өнгө, радиус, breakpoint
+$themes: (
+  dark: (bg: #0f1b1a, surface: #16272a, text: #e8f1ee, muted: #9db3ad, line: #244043),
+  light: (bg: #f3f8f6, surface: #ffffff, text: #12302b, muted: #4b6660, line: #cfe0db)
+);
+$palette: (accent: #3fb8a3, gold: #e0a84a, deep: #0d4a43);
+$radii: (sm: 0.375rem, md: 0.75rem);
+$breakpoints: (md: 768px, lg: 1024px);
+$font-head: Georgia, "Noto Serif", serif;
+$font-body: system-ui, "Segoe UI", Arial, sans-serif;
+$speed: 0.7s;

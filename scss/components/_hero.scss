@@ -1,0 +1,19 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.hero {
+  padding-block: rem(40);
+  background: linear-gradient(135deg, map.get($palette, accent), map.get($palette, deep) 75%);
+  color: contrast(map.get($palette, accent));
+  &__title { font-size: clamp(1.8rem, 5vw, 3rem); max-width: 18ch; }
+  &__text { margin-top: rem(12); max-width: 55ch; }
+  @include respond(md) { padding-block: rem(64); }
+  @include respond(lg) { padding-block: rem(80); }
+}
+.btn {
+  display: inline-block; margin-top: rem(16); padding: rem(12) rem(20);
+  background: var(--gold); color: contrast(map.get($palette, gold));
+  font-weight: 600; text-decoration: none; border-radius: var(--radius-sm);
+  transition: transform .2s;
+  &:hover, &:focus-visible { transform: translateY(-2px); }
+}

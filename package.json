@@ -1,0 +1,10 @@
+{
+  "name": "mongol-gallery-lab7",
+  "version": "1.0.0",
+  "description": "Лаб 7: Лаб 6-ын сайтыг SCSS болгон refactor хийсэн",
+  "scripts": {
+    "sass:dev": "sass --watch --source-map scss/main.scss:css/style.css",
+    "build": "sass --style=compressed --no-source-map scss/main.scss:css/style.css"
+  },
+  "devDependencies": { "sass": "^1.80.0" }
+}

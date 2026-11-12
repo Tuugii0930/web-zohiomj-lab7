@@ -1,0 +1,5 @@
+@use "../abstracts" as *;
+
+main { padding-block: rem(32); display: grid; gap: rem(40); }
+.cards { @include responsive-grid; }
+.gallery { @include responsive-grid; }

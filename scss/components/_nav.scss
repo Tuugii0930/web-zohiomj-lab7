@@ -1,0 +1,30 @@
+@use "../abstracts" as *;
+
+.header { position: sticky; top: 0; z-index: 5; background: var(--surface); border-bottom: 1px solid var(--line); }
+.nav {
+  width: min(100% - 2rem, rem(1120)); margin-inline: auto; padding-block: rem(12);
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: rem(12);
+
+  &__logo {
+    display: flex; align-items: center; gap: rem(8); margin-right: auto;
+    font-family: $font-head; font-weight: 700; color: var(--accent); text-decoration: none;
+  }
+  &__btn {
+    background: none; color: var(--text); font: inherit; cursor: pointer;
+    border: 1px solid var(--line); border-radius: var(--radius-sm); padding: rem(6) rem(12);
+    transition: background .2s, transform .2s;
+    &:hover, &:focus-visible { background: var(--line); transform: translateY(-2px); }
+  }
+  &__list { order: 3; flex-basis: 100%; display: none; flex-direction: column; &.is-open { display: flex; } }
+  &__link {
+    display: block; padding: rem(10) rem(8); text-decoration: none;
+    border-radius: var(--radius-sm); transition: background .2s;
+    &:hover { background: var(--line); }
+  }
+
+  @include respond(md) {
+    &__btn--toggle { display: none; }
+    &__btn--theme { order: 2; }
+    &__list { order: 1; display: flex; flex-basis: auto; flex-direction: row; gap: rem(4); }
+  }
+}
